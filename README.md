@@ -1,5 +1,7 @@
 # Angry Birds Stella 1.1.5 - 加入了存档修改工具的版本
 
+[English](README.md) | [简体中文](README-CN.md)
+
 An unofficial **Angry Birds Stella 1.1.5** build with an in-game save and
 progression menu.
 
