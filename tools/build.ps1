@@ -1,7 +1,7 @@
 param(
     [Parameter(Mandatory = $true)]
     [string]$BaseApk,
-    [string]$OutputApk = "release/Stella_save_tools_unsigned.apk",
+    [string]$OutputApk = "release/Stella_1.1.5_with_save_tools_unsigned.apk",
     [string]$Java = "java",
     [string]$PackageName = ""
 )

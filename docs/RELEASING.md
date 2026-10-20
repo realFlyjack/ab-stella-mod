@@ -19,8 +19,8 @@ assets on the GitHub Releases page.
 
    ```powershell
    Get-FileHash -Algorithm SHA256 `
-     ./release/Stella_save_tools.apk, `
-     ./release/Stella_save_tools_test.apk
+     ./release/Stella_1.1.5_with_save_tools.apk, `
+     ./release/Stella_1.1.5_with_save_tools_test.apk
    ```
 
 5. Create a GitHub Release, then upload both signed APKs and

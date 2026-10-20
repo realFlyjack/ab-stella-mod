@@ -1,10 +1,11 @@
-# Angry Birds Stella Save Tools
+# Angry Birds Stella 1.1.5 - 加入了存档修改工具的版本
 
-Unofficial save and progression tools for **Angry Birds Stella 1.1.5**.
+An unofficial **Angry Birds Stella 1.1.5** build with an in-game save and
+progression menu.
 
-This project packages the modded APK together with the Lua source, resource
-payloads and build scripts used to produce it. The original APK, user save
-files and signing private key are intentionally not included.
+This repository provides the modified APK together with the Lua source,
+resource payloads and build scripts used to produce it. The original APK,
+user save files and signing private key are intentionally not included.
 
 ## Features
 
@@ -30,17 +31,17 @@ server-time check cannot cause a post-2015 startup crash.
 The finished APKs are attached to GitHub Releases rather than committed to
 the Git repository:
 
-- `Stella_save_tools.apk`: normal package name
+- `Stella_1.1.5_with_save_tools.apk`: normal package name
   `com.rovio.angrybirdsstella`.
-- `Stella_save_tools_test.apk`: side-by-side test package
+- `Stella_1.1.5_with_save_tools_test.apk`: side-by-side test package
   `com.rovio.angrybirdsstella.modtest`.
 - `release/SHA256SUMS.txt`: hashes for both APKs.
 
 For the current build:
 
 ```text
-67F116A91F578EE5ECC97FE8220FD5153F0072BBEED90CA40B7B8AD44FEFC34D  Stella_save_tools.apk
-62903F6B8F147B17E526BB9CC5B5B79088C2D1B874AAA01784677B1C152649B1  Stella_save_tools_test.apk
+67F116A91F578EE5ECC97FE8220FD5153F0072BBEED90CA40B7B8AD44FEFC34D  Stella_1.1.5_with_save_tools.apk
+62903F6B8F147B17E526BB9CC5B5B79088C2D1B874AAA01784677B1C152649B1  Stella_1.1.5_with_save_tools_test.apk
 ```
 
 The normal release uses a different signing certificate from the official
@@ -75,8 +76,8 @@ Sign and verify it with your own key:
 
 ```powershell
 pwsh ./tools/sign.ps1 `
-  -InputApk ./release/Stella_save_tools_unsigned.apk `
-  -OutputApk ./release/Stella_save_tools.apk `
+  -InputApk ./release/Stella_1.1.5_with_save_tools_unsigned.apk `
+  -OutputApk ./release/Stella_1.1.5_with_save_tools.apk `
   -Keystore C:/path/to/release.keystore `
   -StorePass YOUR_PASSWORD `
   -KeyAlias YOUR_ALIAS `
@@ -100,7 +101,7 @@ src/lua/                    Human-editable Lua sources
 src/smali/                  Modified StartActivity smali
 src/AndroidManifest.xml     Manifest with INTERNET permission removed
 src/assets/                 Built Lua assets, gift config and initial payload
-tests/                      Sandboxed Lua save-tool tests
+tests/                      Sandboxed Lua tests for the save menu
 tools/                      Build, pack, unpack and signing tools
 third_party/                Lua 5.1.5 source and license
 docs/                       Modding and texture notes
