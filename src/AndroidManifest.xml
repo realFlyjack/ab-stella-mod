@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.rovio.angrybirdsstella" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415">
+    <permission android:name="com.rovio.angrybirdsstella.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.REGISTRATION"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.rovio.angrybirdsstella.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="false" android:xlargeScreens="true"/>
+    <application android:debuggable="false" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize" android:launchMode="singleTask" android:name="com.rovio.fusion.App" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <meta-data android:name="com.sec.android.airview.enable" android:value="true"/>
+            <intent-filter>
+                <action android:name="com.sec.android.airview.HOVER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="com.rovio.angrybirdsstella-1.1.5"/>
+                <data android:scheme="wb1365192311"/>
+                <data android:scheme="com.rovio.angrybirdsstella"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@string/app_id"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:name="com.rovio.fusion.FusionGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.rovio.angrybirdsstella"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.rovio.fusion.LocalNotificationsWrapper"/>
+        <service android:name="com.rovio.fusion.GCMIntentService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.rovio.fusion.VideoPlayerActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.rovio.fusion.MediaPlayerWrapper" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <service android:name="com.rovio.fusion.payment.google.BillingService"/>
+        <receiver android:name="com.rovio.fusion.payment.google.BillingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.billing.IN_APP_NOTIFY"/>
+                <action android:name="com.android.vending.billing.RESPONSE_CODE"/>
+                <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.rovio.skynest.socialnetwork.SocialSharingViewWrapper" android:screenOrientation="landscape" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jirbo.adcolony.AdColonyOverlay" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jirbo.adcolony.AdColonyFullscreen" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jirbo.adcolony.AdColonyBrowser" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.vungle.publisher.FullScreenAdActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <service android:exported="false" android:name="com.vungle.publisher.VungleService"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:hardwareAccelerated="true" android:name="com.unity3d.ads.android.view.UnityAdsFullscreenActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name="com.extrareality.AndroidSceneGraph.SceneGraphActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.extrareality.AndroidSceneGraph.HowToUseActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name="com.extrareality.SnapshotShareActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name="com.extrareality.GifShareActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.extrareality.VideoDisplay" android:screenOrientation="landscape"/>
+        <activity android:configChanges="orientation" android:name="com.extrareality.SaveToDevice" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.zappar.embed.API_KEY" android:value="n+80O5BMV8AL+JdJLf1B5IUBfE8="/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.LoginActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.mopub.mobileads.MoPubActivity" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.mopub.mobileads.MraidActivity" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.mopub.common.MoPubBrowser" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.mopub.mobileads.MraidVideoPlayerActivity" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.millennialmedia.android.MMActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.millennialmedia.android.VideoPlayer" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.ads.InterstitialAdActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:screenOrientation="landscape"/>
+        <activity android:name="com.rovio.angrybirdsstella.o4.app.StartActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+</manifest>

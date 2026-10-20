@@ -1,0 +1,13 @@
+/build/
+/base/*.apk
+/release/*.apk
+/third_party/lua-5.1.5.tar
+*.keystore
+*.jks
+*.ab
+*.unsigned.apk
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+
