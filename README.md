@@ -31,29 +31,24 @@ server-time check cannot cause a post-2015 startup crash.
 The finished APKs are attached to GitHub Releases rather than committed to
 the Git repository:
 
-- `Stella_1.1.5_with_save_tools.apk`: normal package name
-  `com.rovio.angrybirdsstella`.
-- `Stella_1.1.5_with_save_tools_test.apk`: side-by-side test package
+- `Stella_1.1.5_with_save_tools.apk`: side-by-side package
   `com.rovio.angrybirdsstella.modtest`.
-- `release/SHA256SUMS.txt`: hashes for both APKs.
+- `release/SHA256SUMS.txt`: hash for the APK.
 
 For the current build:
 
 ```text
-67F116A91F578EE5ECC97FE8220FD5153F0072BBEED90CA40B7B8AD44FEFC34D  Stella_1.1.5_with_save_tools.apk
-62903F6B8F147B17E526BB9CC5B5B79088C2D1B874AAA01784677B1C152649B1  Stella_1.1.5_with_save_tools_test.apk
+62903F6B8F147B17E526BB9CC5B5B79088C2D1B874AAA01784677B1C152649B1  Stella_1.1.5_with_save_tools.apk
 ```
 
-The normal release uses a different signing certificate from the official
-game. Android therefore cannot install it over an official installation.
-Back up the existing save, uninstall the old package, install the modded APK,
-then restore the save if needed. The test APK can be installed alongside the
-official game.
+The release uses its own package ID and signing certificate, so it can be
+installed alongside the official game without replacing or uninstalling the
+official package. The official game and its save data remain untouched.
 
-Main save path:
+The side-by-side build uses a separate save path:
 
 ```text
-/data/user/0/com.rovio.angrybirdsstella/files/settings.lua
+/data/user/0/com.rovio.angrybirdsstella.modtest/files/settings.lua
 ```
 
 ## Build
@@ -87,6 +82,9 @@ pwsh ./tools/sign.ps1 `
 `tools/apktool.jar` and `tools/lib/apksig-2.3.0.jar` are included. The bundled
 `tools/bin/luac32float.exe` is a Windows 32-bit Lua 5.1.5 compiler configured
 for 4-byte `lua_Number`, matching the game's bytecode format.
+
+The build script defaults to the side-by-side package name
+`com.rovio.angrybirdsstella.modtest`.
 
 Run the save-tool logic tests:
 

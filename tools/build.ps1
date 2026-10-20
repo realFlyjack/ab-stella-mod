@@ -3,7 +3,7 @@ param(
     [string]$BaseApk,
     [string]$OutputApk = "release/Stella_1.1.5_with_save_tools_unsigned.apk",
     [string]$Java = "java",
-    [string]$PackageName = ""
+    [string]$PackageName = "com.rovio.angrybirdsstella.modtest"
 )
 
 $ErrorActionPreference = "Stop"
