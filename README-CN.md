@@ -12,7 +12,7 @@
 进入游戏选关界面，点击齿轮按钮，然后选择 **SAVE TOOLS**。
 
 - **UNLOCK ALL MAIN LEVELS**：将第一、二章全部 131 个主线和闸门关卡设为一星，
-  补齐地图进度，并解锁 Luca、Willow、Dahlia、Gale。
+  补齐地图进度，并解锁 Luca、Willow、Dahlia、Gale 和锤子道具按钮。
 - **CLAIM GIFTS**：解锁四个海滩礼包装扮：Sweet Tunes Stella、
   Artistic Willow、Scientist Dahlia、Princess Gale。
 - **PURPLE STAR LEVEL +5**：将岛上活动紫星等级提升 5 级，最高 35 级。经验值会
@@ -35,7 +35,7 @@ APK 已移除 `android.permission.INTERNET` 权限，因此旧服务器时间检
 当前版本的 SHA-256：
 
 ```text
-62903F6B8F147B17E526BB9CC5B5B79088C2D1B874AAA01784677B1C152649B1  Stella_1.1.5_with_save_tools.apk
+BC22F12D51DCDAFEF7C44FC3EEC2D337C952C6289BC486B20480603A6D14C9EA  Stella_1.1.5_with_save_tools.apk
 ```
 
 该版本使用独立包名和签名证书，可与官方游戏同时安装，不需要卸载或替换官方

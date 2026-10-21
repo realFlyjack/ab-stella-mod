@@ -154,6 +154,10 @@ function SettingsWrapper.clearFlag(_, name)
   settings.flagTable[name] = nil
 end
 
+function SettingsWrapper.setFlag(_, name)
+  settings.flagTable[name] = true
+end
+
 function SettingsWrapper.setActiveBirdSkin(_, character, skinName)
   settings.root.activeBirdSkins = settings.root.activeBirdSkins or {}
   settings.root.activeBirdSkins[character] = skinName
@@ -266,6 +270,11 @@ assertEqual(
   settings.flagTable.gateShouldBeDestroyed,
   nil,
   "gate reveal flag cleared"
+)
+assertEqual(
+  settings.flagTable.powerUpButtonUnlocked,
+  true,
+  "hammer power-up button unlocked"
 )
 assertEqual(settings.root.unlockedBirdSkins.Luca, true, "Luca unlock")
 assertEqual(settings.root.unlockedBirdSkins.Willow, true, "Willow unlock")

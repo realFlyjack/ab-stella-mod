@@ -1,4 +1,5 @@
 /build/
+/work/
 /base/*.apk
 /release/*.apk
 /third_party/lua-5.1.5.tar

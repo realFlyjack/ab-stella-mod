@@ -15,7 +15,7 @@ Open the in-game map, select the gear button, then choose **SAVE TOOLS**.
 
 - **UNLOCK ALL MAIN LEVELS**: sets all 131 Chapter 1 and Chapter 2 main/gate
   levels to one-star completion, fills map progress, and unlocks Luca, Willow,
-  Dahlia and Gale.
+  Dahlia, Gale, and the hammer power-up button.
 - **CLAIM GIFTS**: unlocks the four Beach gift outfits:
   Sweet Tunes Stella, Artistic Willow, Scientist Dahlia and Princess Gale.
 - **PURPLE STAR LEVEL +5**: raises island-event experience level by five,
@@ -40,7 +40,7 @@ the Git repository:
 For the current build:
 
 ```text
-62903F6B8F147B17E526BB9CC5B5B79088C2D1B874AAA01784677B1C152649B1  Stella_1.1.5_with_save_tools.apk
+BC22F12D51DCDAFEF7C44FC3EEC2D337C952C6289BC486B20480603A6D14C9EA  Stella_1.1.5_with_save_tools.apk
 ```
 
 The release uses its own package ID and signing certificate, so it can be

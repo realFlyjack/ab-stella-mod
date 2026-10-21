@@ -321,6 +321,11 @@ function SettingsPopup:applyMainStars(starCount)
         "gateShouldBeDestroyed"
     )
     repairMapScreenState(playerData)
+    safeCall(
+        SettingsWrapper.setFlag,
+        SettingsWrapper,
+        "powerUpButtonUnlocked"
+    )
 
     for _, character in ipairs(MAIN_CHARACTERS) do
         SettingsWrapper.unlockBirdSkin(SettingsWrapper, character)
